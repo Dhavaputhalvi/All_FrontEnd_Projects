@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "shape_calculator_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

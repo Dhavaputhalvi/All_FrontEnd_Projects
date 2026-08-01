@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <style>
+        #colorcode{
+            margin-left: 1000px;
+        }
+        #div1{
+            color: red;
+            font-size: 50px;
+        }
+        #div2{
+            margin-left: 45%;
+            margin-top: 20%;
+        }
+        #button{
+            background-color: yellow;
+            width:200px;
+            height:50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body id="maindiv">
+    <div id="div1">
+        <span>Color Flipper</span>
+        <span id="colorcode">#</span>
+    </div>
+    <hr>
+    <div id="div2">
+        <input type="button" id="button" value="Change Background">
+    </div>
+    <script>
+        let btn=document.getElementById("button");
+        let values=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        btn.addEventListener('click',clicked)
+        function clicked(){
+            let str="#";
+            for(i=1;i<=6;i++)
+                str=str.concat(random());
+            document.getElementById("colorcode").innerHTML=str;
+            document.getElementById("maindiv").style.backgroundColor=str;    
+        }
+        function random(){
+               let randomNumber=Math.floor(Math.random()*16);
+               return values[randomNumber];
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "28631000000013773",
+      "name": "Login-Page",
+      "domain": {
+        "id": "50038189181",
+        "name": "login-page-60064325153.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60064325153",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

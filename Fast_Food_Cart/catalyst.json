@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "fast_food_website"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

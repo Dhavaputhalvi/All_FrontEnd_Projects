@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <style>
+         body{
+           /* background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(98, 98, 252, 1) 0%, rgba(30, 188, 232, 1) 75%); */ 
+           background-color: rgb(197, 34, 237);
+         }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 90%;
+            height: 100vh;
+            align-items: center;
+        }
+        .title{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 150px;
+            text-align: center;
+            margin-top: 30px;
+            margin-left: 100px;
+        }
+        .expensediv{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 50px;
+            width: 80%;
+            height: 70%;
+            margin-top: 50px;
+            font-size: larger;
+           
+        }
+        .transaction-summary , .add-transaction{
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+           background-color: antiquewhite;
+        }
+        option{
+              width: 300px;
+              height: 200px;
+        }
+        .add-transaction{
+            flex-direction: column;
+            align-items: center;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            padding: 5px 2px;
+        }
+        .transaction-summary{
+            flex-direction: column;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            align-items: center;
+        }
+        button{
+            background-color: blue;
+            font-size: larger;
+            color: white;
+            height: fit-content;
+            border-radius: 20px;
+            width: 300px;
+        }
+        select{
+            width: 300px;
+            height: 40px;
+        }
+        .tot-expense p{
+             color: red;
+        }
+        .tot-income p{
+            color:rgb(45, 242, 45);
+        }
+        .tot-bal , .tot-income , .tot-expense{
+             background-color: white;
+             width: 150px;
+             border-radius: 10px;
+             text-align: center;
+        }
+        input{
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 3px grey;
+            height: 40px;
+        }
+        .title button{
+            width: 200px;
+            height: 40px;
+            border-radius:20px;
+        }
+        .title button:hover{
+            background-color: rgb(23, 235, 8);
+            transition: 0.6s;
+        }
+        .divbutton{
+            height: 50px;
+            width: fit-content;
+            color: red;
+            background-color: antiquewhite;
+            border: none;
+        }
+        .recent-trans-history{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            background-color: antiquewhite;
+            justify-content: space-around;
+            align-items: center;
+            margin-top:10px;
+            margin-left:80px;
+            width: 87%;
+            border-radius: 20px;
+        }
+        h1{
+            color: white;
+        }
+        p{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="title">
+                <button id="add-income">Add Income</button>
+                <h1>Expense Tracker</h1>
+                <button onclick="reset()">reset Data</button>
+            </div>
+            <div class="expensediv">
+                    <div class="transaction-summary">
+                        <h3 ><i class="fi fi-rr-chat-arrow-grow"></i>  Financial Summary</h3>
+                        <div class="tot-bal">
+                            <h3>Total Balance</h3>
+                            <p id="total-bal">Rs.00.00</p>
+                        </div>
+                        <div class="tot-income">
+                            <h3>Total Income</h3>
+                            <p class="total-income">Rs.00.00</p>
+                        </div>
+                        <div class="tot-expense">
+                            <h3>Total Expense</h3>
+                            <p id="total-exp">Rs.00.00</p>
+                        </div>
+                    </div>
+                    <div class="add-transaction">
+                        <h3> <i class="fi fi-rr-add"></i> Add Transaction</h3>
+                        <div class="description">
+                            <input type="text" placeholder="Add Description" class="desc">
+                        </div>      
+                        <div class="expense-type">
+                            <p>Select category</p>
+                            <select  id="e-type-dropdown">
+                                <option value="Transport" class="options">Transport</option>
+                                <option value="Food"class="options">Food</option>
+                                <option value="Grocery"class="options">Grocery</option>
+                                <option value="Electronics" class="options">Electronics</option>
+                                <option value="Others" class="options">Others</option>
+                            </select>
+                        </div>
+                        <div class="expense-amount">
+                            <p>Add Expense in Rupee</p>
+                            <input type="number" id="amount-expensed" placeholder="Enter Expense Amount">
+                        </div>
+                        <div class="transaction-button">
+                            <button>+ Add Transaction</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="recent-trans-history">
+            </div>
+    </div>
+
+
+
+    <script>
+        let income=0;
+        let expenseAmount=0;
+        let balance=0;
+        let dropdown;
+        let history,amt;
+        let description,count=0;
+        document.querySelector("#add-income").addEventListener('click',function(){
+           income=prompt("Enter Your Monthly Income")
+           document.querySelector(".total-income").innerHTML="Rs."+income;
+        })
+
+        function reset(){
+            location.reload()
+        }
+        document.querySelector(".transaction-button").addEventListener('click',function(){
+             dropdown=document.getElementById("e-type-dropdown").options[document.getElementById("e-type-dropdown").selectedIndex]
+             description=document.querySelector(".desc").value
+             if(expenseAmount){
+                amt=document.getElementById("amount-expensed").value
+                console.log(expenseAmount)
+                expAmount=document.getElementById("amount-expensed").value;
+                expenseAmount=parseInt(expenseAmount)+parseInt(expAmount)
+                document.getElementById("total-exp").textContent="Rs."+expenseAmount
+             }
+             else{
+                amt=document.getElementById("amount-expensed").value
+                 expenseAmount=document.getElementById("amount-expensed").value;
+                document.getElementById("total-exp").textContent="Rs."+expenseAmount
+             }
+            
+             balance=income-expenseAmount
+             if(expenseAmount>balance){
+                document.querySelector("#total-bal").style.color="red"
+                document.querySelector("#total-bal").textContent="Expense Overhead"+" Rs."+balance
+             }
+             else
+                 document.querySelector("#total-bal").textContent="Rs."+balance;
+        })
+
+        document.querySelector(".transaction-button").addEventListener('click',function(){
+                count++
+                let parentdiv=document.createElement("div")
+                document.querySelector(".recent-trans-history").appendChild(parentdiv)
+                parentdiv.style.display="flex"
+                parentdiv.style.gap="8px"
+                let inp=document.createElement("input")
+                let btn=document.createElement("button")
+                btnclass=(btn.id="divbtn"+count)
+                btn.className="divbutton"
+                btn.textContent="Remove"
+
+                parentdiv.appendChild(inp)
+                parentdiv.appendChild(btn)
+
+                if(description)
+                    inp.value=description+" "+(dropdown.value)+"\n Rs. "+ amt
+                else
+                    inp.value=(dropdown.value)+"\n Rs. "+ amt
+                
+
+                document.getElementById(btnclass).addEventListener('click',function(event){
+                    let ent=event.currentTarget;
+                    parentdiv.removeChild(inp)
+                    parentdiv.removeChild(btn)
+                    document.querySelector(".recent-trans-history").removeChild(parentdiv)
+                })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "rock_paper_scissors_game_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

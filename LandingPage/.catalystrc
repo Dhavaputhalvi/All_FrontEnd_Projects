@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "28631000000013386",
+      "name": "Landing-Page",
+      "domain": {
+        "id": "50038188663",
+        "name": "landing-page-60064325153.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60064325153",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

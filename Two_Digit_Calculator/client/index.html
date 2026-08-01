@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Digit calculator</title>
+    <style>
+        #div1{
+            background-color: rgb(6, 21, 4);
+            width: 500px;
+            height: 300px;
+            margin-left:35%;
+            margin-top: 2%;
+            border-radius: 50px;
+            color: gold;
+        }
+        #div2{
+            visibility:hidden;
+            background-color: rgb(6, 21, 4);
+            width: 680px;
+            height: 280px;
+            margin-left:28%;
+            margin-top: 5%;
+            border-radius: 50px;
+            color: gold;
+        }
+        #choice{
+            margin-left:20%;
+            text-align: center;
+            width :300px; 
+            height : 50px;
+        }
+        #butt1, #butt2{
+            margin-left: 37%;
+            background-color: rgb(111, 182, 241);
+            width: 150px;
+            height: 50px;    
+        }
+        #h3tag{
+            margin-left:42%;
+            font-size: 30px;
+        }
+        #val1,#val2{
+            margin-left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1 style="text-align: center;">Two Digit Calculator</h1>
+        <select id="choice">
+            <option value="Addition">Addition</option>
+            <option value="Subtraction">Subtraction</option>
+            <option value="Multiplication">Multiplication</option>
+            <option value="Division">Division</option>
+            <option value="Modulus">Modulus</option>
+        </select><br><br><br>
+        <input type="button" id="butt1" value="Submit" />
+    </div>
+    <div id="div2">
+         <h1 style="text-align: center;">Perform operation</h1><br>
+         <input type="text" id="val1" placeholder="Enter value 1"><br><br>
+         <input type="text" id="val2" placeholder="Enter value 2"><br><br>
+         <input type="button" id="butt2" value="Calculate"/>
+         <h3 id="h3tag" style="color: gold;"></h3>
+    </div>
+    <script>
+   
+          let sub1=document.getElementById("choice");
+          let sub2=document.getElementById("butt1");
+          sub2.addEventListener('click',sample);
+          function sample(){
+            const opr=sub1.options[sub1.selectedIndex].value;
+            document.getElementById("div2").style.visibility="visible";
+            document.getElementById("butt2").addEventListener('click',calc);
+           function calc(){
+            let value1=Number(document.getElementById("val1").value);
+            let value2=Number(document.getElementById("val2").value);
+            switch(opr){
+              case 'Subtraction':
+                oprt='-';
+                res=value1-value2;
+                break;
+              case 'Addition':
+                oprt='+';
+                res=value1+value2;
+                break;
+              case 'Multiplication':
+                oprt='*';
+                res=value1*value2;
+                break;
+              case 'Division':
+                oprt='/';
+                res1=value1/value2;
+                res=res1.toFixed(3);
+                break;
+            case 'Modulus':
+                oprt='%';
+                res=value1%value2;
+                break;
+            default:
+                break;    
+            }
+            let rest=document.getElementById("h3tag").innerHTML=value1+oprt+value2+"="+res; 
+           }  
+          }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "billing_software_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

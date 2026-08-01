@@ -1,0 +1,313 @@
+/* LET THE STYLING BEGIN *//* LET THE STYLING BEGIN */
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2, 2, 81);
+    min-width: 100%;
+    color: rgb(37, 222, 239);
+    margin: 0;
+    top:0;
+    position: fixed;
+}
+
+body{
+    background-color: black;
+    font-size: 20px;
+    color: rgb(37, 222, 239);
+}
+.header-right{
+    display: flex;
+    justify-content: space-around;
+    gap:80px;
+    
+    margin-right: 100px;
+}
+#statusbackcolor , .statusbackcolor{
+    width: 150px;
+    border-radius: 10px;
+    color: rgb(37, 222, 239);
+    height: 30px;
+    align-items: center;
+    font-size: x-large;
+    margin-left: 20px;
+}
+.statusbackcolor{
+    width: 100px;
+    height: 30px;
+    margin-left: 30px;
+}
+.header-right-left a:hover{
+    transform: translateY(-3px);
+}
+body::placeholder{
+    color: rgb(37, 222, 239);
+}
+.header-right-left{
+    display: flex;
+    justify-content: space-around;
+    gap:50px
+}
+.header-right-left a{
+color: rgb(37, 222, 239);
+margin-top: 20px;
+text-decoration: none;
+font-size: large;
+}
+.header-right-right{
+    margin-top: 15px;
+    display: flex;
+    width: 80px;
+    height: 30px;
+    gap:20px
+}
+.header-right-right button{
+    background-color: rgb(2, 2, 81);
+    color: rgb(37, 222, 239);
+    width: 100px;
+     cursor: pointer;
+    height: 30px;
+    font-size: large;
+    border: none;
+}
+#profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#profile{
+    display: flex;
+    width: 400px;
+    gap: 20px;
+    height: 50px;
+    border: none;
+}
+#profile span{
+    margin-top: 10px;
+}
+aside{
+    margin-left: 75%;
+    display: none;
+    margin-top: 20px;
+    flex-direction: column;
+    gap:10px;
+    width: 350px;
+    height: 250px;
+    text-align: center;
+}
+aside img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    border-radius: 50%;
+}
+.profileDetails{
+    display: flex;
+}
+.main-cont{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 50px;
+    color: white;
+    margin-top: 100px;
+}
+#viewprofile{
+    display: none;
+    position: fixed;   
+    top: 20px;         
+    right: 20px;       
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    height: fit-content;
+    color: black;
+    z-index: 999;      
+    flex-direction: column;
+}
+input{
+    color:rgb(37, 222, 239);
+}
+.dashboard{
+    display: flex;
+    gap:50px;
+}
+.dashboard-cont{
+    display: flex;
+    gap:30px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 150px;
+    width: 350px;
+    box-shadow: 2px 2px 2px 2px rgb(23, 23, 23);
+}
+#c1 img, #c2 img,#c3 img{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+#c1 img:hover, #c2 img:hover,#c3 img:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.dashboard div img{
+    width:50px;
+    margin-top: 30px;
+    height: 50px;
+}
+#c1{
+    background-color: rgb(53, 138, 249);
+}
+#c2{
+    background-color: rgb(74, 218, 74);
+}
+#c3{
+    background-color: orange;
+}
+#c4{
+    background-color: rgb(241, 102, 52);
+}
+.searchBooks{
+    display: flex;
+    margin-top: 50px;
+    gap:50px;
+    margin-bottom: 10px;
+}
+.searchBooks input , .searchBooks select{
+    width: 450px;
+    height: 40px;
+    border: none;
+    font-size: larger;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(37, 222, 239);
+}
+.searchBooks button{
+    width: 150px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    font-size: larger;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(37, 222, 239);
+}
+table{
+    width: 1200px;
+    font-size: larger;
+    border: 2px solid black;
+}
+table thead{
+    background-color: black;
+    color:rgb(37, 222, 239);
+}
+.recentActivity{
+    margin-top: 30px;
+    text-align: center;
+}
+.recentActivity button{
+    color: white;
+}
+.addBook{
+    display: flex;
+    font-size: larger;
+    width: 1300px;
+    margin-top: 50px;
+    gap:30px;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    gap:50px;
+    margin-left: 100px;
+}
+.addBookLeft , .addBookRight{
+    display: flex;
+    flex-direction:column;
+    width: 500px;
+    gap:20px;
+}
+.addBookLeft input , .addBookLeft select , .addBookRight input , .addBookRight select{
+     height: 40px;
+     border: none;
+     border-bottom:  2px solid rgb(37, 222, 239);
+     border-radius: 10px;
+     outline: none;
+}
+.addBookRight select{
+    border-bottom: 2px solid rgb(37, 222, 239);
+    height: 40px;
+}
+.addBook h1{
+    text-align: center;
+}
+.addBook button{
+    background-color: blue;
+    color:white;
+    height: 50px;
+    width: 300px;
+    align-self: center;
+    border-radius: 20px;
+    font-size: x-large;
+     box-shadow: 1px 1px 1px 1px grey;
+}
+footer{
+    background-color: rgb(2, 2, 81);
+    color: rgb(37, 222, 239);;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.allbooks-cont , .issuedbooks-cont{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 40px;
+    row-gap: 50px; 
+    padding: 10px;
+}
+.outbookCont{
+    gap:60px;
+    padding: 20px;
+    background-color: greenyellow;
+    width: 400px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px solid rgb(37, 222, 239);
+}
+.hist-div{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    align-items: center;
+}
+.hist-div button{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(37, 222, 239);
+    align-self: center;
+    border-radius: 20px;
+    font-size: larger;
+}
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input , select{
+    background-color: black;
+   
+}
+input::placeholder ,select{
+     color: rgb(37, 222, 239);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stopwatch.css">  
+    <style>
+        body{
+        background: linear-gradient(90deg,rgba(206, 36, 212, 1) 0%, rgba(204, 97, 88, 1) 30%, rgba(237, 221, 83, 1) 100%);
+    }
+    div{
+        display:block;
+        text-align: center;
+        margin-top: 15%;
+        font-size: 30px;
+    }
+    input{
+        font-size: 20px;
+        width: 100px;
+        height:50px;
+        background-color: black;
+        color:white
+    }
+    span{
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Stop Watch</h1> <br>
+    <span id="seconds">00</span>
+    <span>:</span>
+    <span id="ms">00</span>
+    <br><br>
+    <input type="button" id="start" value="Start">
+    <input type="button" id="stop"value="Stop">
+    <input type="button" id="reset" value="Reset">
+    </div>
+
+    <script>
+        let i=0;
+let sec=document.getElementById("seconds");
+let ms=document.getElementById("ms");
+let st=document.getElementById("start").addEventListener('click',start);
+function start(){
+        let interval=setInterval(function(){
+                let j=0;
+                if(document.getElementById("reset").addEventListener('click',function(){
+                        location.reload()
+                }));
+                let interval2=setInterval(function(){
+                if(j>59){
+                        j=0;
+                        ms.innerHTML=j;
+                }
+                else{
+                        if(j<10)
+                        ms.innerHTML="0"+ j;
+                        else
+                        ms.innerHTML= j;
+                }
+                j++
+                if(document.getElementById("stop").addEventListener('click',function(){
+                        clearInterval(interval2);
+                }));
+                
+                },10);
+
+                if(i<10)
+                   sec.innerHTML="0"+ i;
+                else
+                   sec.innerHTML=i;
+                i++
+                if(document.getElementById("stop").addEventListener('click',function(){
+                        clearInterval(interval);
+                }));
+                if(document.getElementById("reset").addEventListener('click',function(){
+                        location.reload()
+                }));
+                 
+        },1000)
+       
+}
+
+    </script>
+</body>
+</html>

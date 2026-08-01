@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "targets": [
+      "com_dhavaputhalvi_portfolio",
+      "portfolio_final_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

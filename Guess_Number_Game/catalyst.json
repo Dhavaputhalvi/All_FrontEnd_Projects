@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "guess_number_game_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

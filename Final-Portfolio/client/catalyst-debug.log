@@ -1,0 +1,48 @@
+[debug] [2026-07-09T11:25:34.786Z] : 
+[debug] [2026-07-09T11:25:34.788Z] : ----------------------------------------------------------------------
+[debug] [2026-07-09T11:25:34.789Z] : Command:      C:\Program Files\nodejs\node.exe C:\Users\yuvan\AppData\Roaming\npm\node_modules\zcatalyst-cli\lib\bin\catalyst.js functions:add
+[debug] [2026-07-09T11:25:34.789Z] : CLI Version:  1.26.2
+[debug] [2026-07-09T11:25:34.789Z] : Platform:     win32
+[debug] [2026-07-09T11:25:34.789Z] : Node Version: v22.15.0
+[debug] [2026-07-09T11:25:34.789Z] : Time:         Thu Jul 09 2026 16:55:34 GMT+0530 (India Standard Time)
+[debug] [2026-07-09T11:25:34.789Z] : ----------------------------------------------------------------------
+[debug] [2026-07-09T11:25:34.789Z] : 
+[debug] [2026-07-09T11:25:35.448Z] : > authorizing via signed-in user option
+[debug] [2026-07-09T11:25:35.451Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL"]
+[debug] [2026-07-09T11:25:35.464Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/28631000000408002 
+
+[debug] [2026-07-09T11:25:36.051Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jul 2026 11:25:36 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-09T11:25:36.056Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/28631000000408002/environment 
+
+[debug] [2026-07-09T11:25:36.263Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jul 2026 11:25:36 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-09T11:25:36.296Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/get-details 
+Query params: {"feature_name":"integration_services"}
+
+[debug] [2026-07-09T11:25:36.398Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jul 2026 11:25:36 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[debug] [2026-07-09T11:25:38.044Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/get-details 
+Query params: {"feature_name":"runtime","function_type":"basicio"}
+
+[debug] [2026-07-09T11:25:38.208Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 09 Jul 2026 11:25:38 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","x-content-type-options":"nosniff","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=64072000; includeSubDomains; preload"}
+
+[info] [2026-07-09T11:25:42.934Z] : This utility will ask series of questions with sensible defaults for creating package.json
+Feel free to modify them if needed.
+
+[info] [2026-07-09T11:25:42.936Z] : Use `npm install <pkg> --save` afterwards to install a package and 
+save it as a dependency in the package.json file.
+
+[info] [2026-07-09T11:27:55.742Z] : ℹ catalyst.json file has been successfully updated with functions details.
+[info] [2026-07-09T11:27:55.742Z] : 
+[info] [2026-07-09T11:27:55.743Z] : ✔ Catalyst functions add complete!
+[debug] [2026-07-09T11:27:55.743Z] : NO ERRORS REGISTERED
+[debug] [2026-07-09T11:27:55.744Z] : EXEC ENDED with event: functions:add, message: success
+[debug] [2026-07-09T11:27:55.744Z] : TOTAL DURATION OF COMMAND EXEC : 140315
+[debug] [2026-07-09T11:27:55.751Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.in/baas/v1/cli/logs 
+<request body omitted>
+

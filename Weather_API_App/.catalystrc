@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "28631000000020069",
+      "name": "Weather-API-Website",
+      "domain": {
+        "id": "50038695798",
+        "name": "weather-api-website-60064325153.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60064325153",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

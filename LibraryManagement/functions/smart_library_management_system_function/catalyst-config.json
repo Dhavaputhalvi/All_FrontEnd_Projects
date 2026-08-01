@@ -1,0 +1,11 @@
+{
+	"deployment": {
+		"name": "smart_library_management_system_function",
+		"stack": "node18",
+		"type": "basicio",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

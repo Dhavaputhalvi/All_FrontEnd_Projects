@@ -1,0 +1,44 @@
+/* LET THE STYLING BEGIN */
+
+        body{
+            color: white;
+            background: linear-gradient(90deg,rgba(152, 160, 245, 1) 8%, rgba(89, 124, 240, 1) 18%, rgba(148, 78, 252, 1) 40%, rgba(186, 38, 235, 1) 62%, rgba(211, 32, 247, 1) 73%, rgba(212, 28, 203, 1) 90%);
+        }
+        div{
+            display:flex;
+            flex-direction: column;
+            height: fit-content;
+            width:300px;
+            padding: 20px;
+            padding-left: 40px;
+            border-radius: 50px;
+            margin-left: 37%;
+            margin-top: 10px;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid black;
+            outline: none;
+            background: none;
+        }
+        #submit{
+           background-color: rgb(17, 240, 17);
+           width: 80px;
+           height: 30px;
+           border-radius: 20px;
+           border: none;
+           border-bottom: 2px solid black;
+           margin-left: 60px;
+        }
+        h1{
+            text-align: center;
+        }
+        small{
+            color: yellow;
+        }
+        .custom-placeholder::placeholder{
+            color: white;
+            opacity: 0.7;
+        }

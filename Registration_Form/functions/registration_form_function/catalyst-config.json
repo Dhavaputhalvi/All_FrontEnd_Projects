@@ -1,0 +1,11 @@
+{
+	"deployment": {
+		"name": "registration_form_function",
+		"stack": "node18",
+		"type": "basicio",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

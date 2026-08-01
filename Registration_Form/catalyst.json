@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "registration_form_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

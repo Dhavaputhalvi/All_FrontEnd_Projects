@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        div{
+            background-color: rgb(114, 242, 231);
+            width: 500px;
+            height: 500px;
+            margin-left:35%;
+            margin-top: 9%;
+        }
+        #text1{
+            margin-left:20%;
+            text-align: center;
+            width :300px; 
+            height : 300px;
+        }
+        #butt{
+            margin-left: 37%;
+            background-color: rgb(138, 239, 65);
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Word Counter</h1>
+        <textarea rows="10" cols="50" id="text1" placeholder="Enter text Message to count"></textarea><br><br><br>
+        <input type="button" id="butt" onclick="count()" value="Check Count" />
+        <h3 id="h3tag" style="text-align: center;"></h3>
+        
+    </div>
+
+    <script>
+        function count(){
+            //alert("script is running")
+            let word=document.getElementById("text1").value;
+            let wor1=word.replaceAll(" ,"," ");
+            let wor2=wor1.replaceAll(" ."," ");
+            let words=wor2.replaceAll(", "," ");
+            let word1=words.replaceAll(','," ");
+            let word2=word1.replaceAll(". ",' ');
+            let word3=word2.replaceAll('.'," ");
+            let strings=word3.split(" ");
+            //alert(strings);
+            let arr=[];
+            for(i=0;i<strings.length;i++)
+            {
+                  arr.push(strings[i]);
+            }
+
+            if(arr[0]=='')
+            {
+                  arr.splice(0,1);
+            }
+
+            if(arr[arr.length-1]=='');
+            {
+                  arr.pop()
+            }
+            let length=arr.length+1;
+            document.getElementById("h3tag").innerHTML="Number of words is "+length;
+        }
+       </script>
+</body>
+</html>

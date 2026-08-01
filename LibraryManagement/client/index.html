@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h2>Smart Library</h2>
+        </div>
+        <div class="header-right">
+            <div class="header-right-left">
+                <a href="#main-dashboard">Dashboard</a>
+                <a href="./books.html">Books</a>
+                <a href="./issuedBooks.html">Issued Books</a>
+                <a href="./history.html">History</a>
+             </div>
+            <div class="header-right-right">
+                <button id="profile"  onclick="viewDP()"><img src="./dhavaputhalvi_image.jpg" alt=""> <span>Admin</span></button>
+            </div>
+        </div>
+    </header>
+    <aside id="viewprofile" style="margin-top: 50px;">
+        <div class="profileDetails" >
+            <img src="./dhavaputhalvi_image.jpg" alt="Admin Image" style="color: white;">
+            <div class="details">
+                <h2 id="adminName">Dhavaputhalvi</h2>
+                <p id="adminposition">Administrator</p>
+                <p id="adminEmail">dhavaputhalviramesh@gmail.com</p>
+            </div>
+        </div>
+    </aside>
+    <div class="main-cont">
+        <div class="dashboard" id="main-dashboard">
+            <div class="dashboard-cont" id="c1">
+                <img src="./image.png" alt="">
+                <span><h2>Total Books</h2><h2 id="Total-books">0</h2></span>
+            </div>
+            <div class="dashboard-cont" id="c2">
+                <img src="./image copy.png" alt="" " >
+                <span><h2>Available Books</h2><h2 class="Available-books">0</h2></span>
+            </div>
+            <div class="dashboard-cont" id="c3">
+                <img src="./image copy 2.png" alt="" >
+                <span><h2>Issued Books</h2><h2 class="Issued-books">0</h2></span>
+            </div>
+        </div>
+        <div class="searchBooks">
+            <input type="search" placeholder="Search Books via Name..." id="searchBookName" onkeyup="searchBook()">
+            <select id="category">
+                <option value="" selected disabled>All Categories</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="CIVIL">CIVIL</option>
+            </select>
+            <button id="searchBooks" onclick="searchbyCategory()">Search</button>
+        </div>
+        <div class="recentActivity">
+            <table  cellpadding="8px" cellspacing="2px" border="2px solid black">
+                <thead>
+                    <tr>
+                        <th>BookID</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th id="actions"style="width: 300px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="addList">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="addBook">
+            <h1 style="color: rgb(37, 222, 239);"> Add New Books</h1>
+            <form action="submit" id="BookaddingForm">
+                <div class="addBookLeft">
+                    <input type="text" id="BookName" placeholder="BookName">
+                    <select id="addCategory">
+                        <option value="" selected disabled>All Categories</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                    <input type="number" id="addBookID" placeholder="Book ID">
+                </div>
+                <div class="addBookRight">
+                    <select id="addBookAuthor">
+                            <option value="" selected disabled>Author</option>
+                            <option value="Dr.Kim Johnes">Dr.Kim Johnes</option>
+                            <option value="Dr.K.Ramakrishna">Dr.K.Ramakrishna</option>
+                            <option value="Dr.R.Satya Devi">Dr.R.Satya Devi</option>
+                            <option value="Cyril Fedrick">Cyril Fedrick</option>
+                            <option value="Kathrina Alice">Kathrina Alice</option>
+                            <option value="Dr.Sathya Balaji">Dr.Sathya Balaji</option>
+                    </select>
+                    <select id="addBookPublisher">
+                            <option value="" selected disabled>Book publisher</option>
+                            <option value="Penguin random House India">Penguin random House India</option>
+                            <option value="simon and Scruhster">simon and Scruhster</option>
+                            <option value="Harper Collins">Harper Collins</option>
+                            <option value="Technical Publications">Technical Publications</option>
+                            <option value="Bloomsbury India">Bloomsbury India</option>
+                    </select>
+                    <select id="addBookStatus">
+                            <option value="" selected disabled>Status</option>
+                            <option value="Issued">Issued</option>
+                            <option value="Available">Available</option>
+                    </select>
+                </div>
+            </form>
+            <button id="addBookbutton" onclick="addBook()">Add Book</button>
+            <div></div>
+        </div>
+    </div>
+
+
+    <footer>
+        &copy;2026 Smart Library Management System
+    </footer>
+
+
+
+ 
+
+    <script src="./main.js"></script>
+</body>
+</html>

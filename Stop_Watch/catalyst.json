@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "stop_watch_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

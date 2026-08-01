@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(90deg,rgb(151, 209, 240) 0%, rgb(100, 140, 220) 30%, rgb(105, 89, 241) 100%);
+        }
+        .frontpage{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            flex-direction: column;
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: red;
+            color: white;
+            font-size: large;
+        }
+        button:hover{
+            box-shadow: 0px 0px 30px white ;
+            transition: 0.6s ;
+        }
+        
+        .outer{
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            position: relative;
+            top:50px;
+            flex-direction: column;
+
+        }
+        .radiobtns{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .inner0{
+            display: flex;
+            gap: 100px;
+        }
+        .question{
+            font-size: larger;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="frontpage" id="frontpage">
+        <h1>Interactive Quiz</h1>
+        <button onclick="quizstart1()" class="start">Start Quiz</button>
+    </div>
+    <div class="outer" id="mainpage" >
+        <div class="inner0">
+            <h2 id="score">Score:0</h2>
+            <h2 id="timer"></h2>
+        </div>
+        <div class="inner">
+            <div class="question"></div><br>
+            <div class="radiobtns">
+                <input type="button" id="radio1" class="radio" onclick="answer(event)">
+                <input type="button" id="radio2"class="radio" onclick="answer(event)">
+                <input type="button" id="radio3"class="radio" onclick="answer(event)">
+                <input type="button" id="radio4"class="radio" onclick="answer(event)">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./main.js">
+        
+    </script>
+</body>
+</html>

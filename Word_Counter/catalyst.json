@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "targets": [
+      "word_counter_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

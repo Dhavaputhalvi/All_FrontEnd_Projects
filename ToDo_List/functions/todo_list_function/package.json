@@ -1,0 +1,9 @@
+{
+	"name": "todo_list_function",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "dhavaputhalviramesh@gmail.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}

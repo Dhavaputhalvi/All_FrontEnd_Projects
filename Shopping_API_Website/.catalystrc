@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "28631000000019001",
+      "name": "Shopping-API-Website",
+      "domain": {
+        "id": "50038655536",
+        "name": "shopping-api-website-60064325153.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60064325153",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
